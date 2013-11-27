@@ -1,14 +1,14 @@
 BitcoinBot
 ==========
 
-*This bot is still a work in progress*
+**This bot is still a work in progress**
 
 Usage:
 -----
 1. Put your API key and API secret key in config.py.example, and rename it to
 config.py
 
-2.Run:
+2. Run:
 
 ```
 python money.py
