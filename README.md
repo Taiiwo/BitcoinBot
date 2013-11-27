@@ -27,9 +27,9 @@ What needs to be done:
 
 - An overall touchup of the algorithm to maximize money making
 
--- The algorithm that chooses how much we buy/sell
+  - The algorithm that chooses how much we buy/sell
 
--- The algorithm that chooses whether we buy/sell
+  - The algorithm that chooses whether we buy/sell
 
 - A nice graph interface using the csv
 
