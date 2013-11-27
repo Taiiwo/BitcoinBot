@@ -4,7 +4,7 @@ CUR2name = 'BTC'# "	  second	"
 lowerlimit = 0.1
 scalefactor = 25
 debug = True
-def getjson():
+def getjson():# gets JSON from the API we get the prices from
 	while 1:
 	    try:
 		jsondata = urllib2.urlopen("https://btc-e.com/api/2/" + CUR1name.lower() + "_" + CUR2name.lower() +  "/ticker").read()
@@ -13,7 +13,8 @@ def getjson():
 		    print "Server Error"
 		    time.sleep(10)
 	return json.loads(jsondata) 
-def getoption():
+
+def getoption():# this allows us to change stuff while the bot is running
 	while 1:
 		try:
 			option = raw_input()
@@ -29,19 +30,19 @@ def getoption():
 		except:
 			print "NaN"
 
-def info():
+def info():# This posts info without printing it
 	while 1:
 		sys.stdout.write(updatetext)
 		time.sleep(1)
 		sys.stdout.write('\r')
 		sys.stdout.flush()
-def sellprice():
+def sellprice():# this gets the sell price
 	return float(getjson()['ticker']["sell"]) 
 
-def buyprice():
+def buyprice():# ' ' ^ Buy
 	return float(getjson()['ticker']["buy"])
 
-def buy(wallet, amount, bprice):
+def buy(wallet, amount, bprice):# this buys 'amount' of cur1 at 'bprice', and returns a new wallet
 	wallets = btceapi.api.Trade(btceapi.api(config.API_KEY,config.API_SECRET), CUR1name.lower() + "_" + CUR2name.lower(), 'buy', bprice, float("%.4f"% amount))
 	if wallets['success'] == 1:
 		wallet[CUR1name] = wallets['return']['funds'][CUR1name.lower()]
@@ -50,7 +51,7 @@ def buy(wallet, amount, bprice):
 		print wallets['error']
 	return wallet
     
-def sell(wallet, amount, sprice):
+def sell(wallet, amount, sprice):# ' ' ^ Sell
 	wallets = btceapi.api.Trade(btceapi.api(config.API_KEY,config.API_SECRET), CUR1name.lower() + "_" + CUR2name.lower(), 'sell', sprice, float("%.4f"% amount))
 	if wallets['success'] == 1:
 		wallet[CUR1name] = wallets['return']['funds'][CUR1name.lower()]
@@ -58,7 +59,7 @@ def sell(wallet, amount, sprice):
 	else:
 		print wallets['error']
 	return wallet
-def getwallet():
+def getwallet():# Gets the wallet for use initially
 	accountdata = btceapi.api.getInfo(btceapi.api(config.API_KEY, config.API_SECRET))
 	wallet = {CUR1name : accountdata['return']['funds'][CUR1name.lower()], CUR2name : accountdata['return']['funds'][CUR2name.lower()]};
 	return wallet
@@ -79,28 +80,29 @@ lastbuy = sellprice()
 lastdo = [lastbuy,lastsale] 
 #define the wallet
 wallet = getwallet()
-#get the riskfactor all the time:
+
 updatetext = ''
+#run functions in alternate threads:
 #thread.start_new_thread( getoption, () )
 thread.start_new_thread( info, () )
 #get initial total for reference
-sprice = sellprice()
-fetotal = wallet[CUR2name] + wallet[CUR1name] * sprice
+fesprice = sellprice()
+fetotal = wallet[CUR2name] + wallet[CUR1name] * fesprice
 while 1:
 	bprice = buyprice()
 	sprice = sellprice()
 	donestuff = 0
-	if bprice < lastdo[0] and bprice < lastdo[1]:
+	if bprice < lastdo[0] and bprice < lastdo[1]:# This defines when to buy. 
 		#calculate decimal price drop
-		decdown = abs(lastbuy / bprice) / 100
+		decdown = abs(lastbuy / bprice) / 100# This is part of the buying algorithm
 		#buy cur1 in relation to the price drop scale
 		if (decdown * scalefactor) < 1:
-			tobuy = (wallet[CUR2name] / bprice) * (decdown * scalefactor)
+			tobuy = (wallet[CUR2name] / bprice) * (decdown * scalefactor)# This is the other part ^^. I decides how much we buy
 
 	    	else:
 	        	tobuy = (wallet[CUR2name] / bprice) * 1
 
-		#make sure we have enough
+		#make sure we have enough and we're buying enough
 		if tobuy <= wallet[CUR2name] / bprice and tobuy >= lowerlimit:
 			#and get new wallet values
 			wallet = buy(wallet, tobuy, bprice)
