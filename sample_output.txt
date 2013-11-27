@@ -1,0 +1,92 @@
+ Profit: 0.000000[SELL] 0.125 LTC for 0.003763 BTC.
+LTC: 0.374
+BTC: 0.012967.
+Total BTC: 0.024268
+===========
+[DEBUG]Old buy price:	0.030180 Old sell price:	0.030160
+[DEBUG]Last buy price:	0.030150 Last sell price:	0.030180
+[DEBUG]Do buy price:	0.030200 Do sell price:	0.030180
+[DEBUG]Buy price:	0.030200 Sell price:	0.030180
+[DEBUG] Raise: 0.009993
+ Profit: 0.000010[DEBUG] Tried to sell 0.093 LTC for 0.002825
+[DEBUG]Old buy price:	0.030210 Old sell price:	0.030200
+[DEBUG]Last buy price:	0.030150 Last sell price:	0.030180
+[DEBUG]Do buy price:	0.030290 Do sell price:	0.030290
+[DEBUG]Buy price:	0.030290 Sell price:	0.030290
+[DEBUG] Raise: 0.009964
+[BUY] 0.107 LTC for 0.003235 BTC.
+LTC: 0.481
+BTC: 0.009732.
+Total BTC: 0.024268
+===========
+[DEBUG]Old buy price: 	0.030290 Old sell price: 	0.030210
+[DEBUG]Last buy price: 	0.030210 Last sell price: 	0.030180
+[DEBUG]Do buy price: 	0.030210 Do sell price:	0.030200
+[DEBUG]Buy price: 	0.030210 Sell price: 	0.030200
+[DEBUG] Fall: 0.009980
+ Profit: 0.000007[SELL] 0.120 LTC for 0.003632 BTC.
+LTC: 0.361
+BTC: 0.009732.
+Total BTC: 0.020669
+===========
+[DEBUG]Old buy price:	0.030270 Old sell price:	0.030210
+[DEBUG]Last buy price:	0.030210 Last sell price:	0.030270
+[DEBUG]Do buy price:	0.030280 Do sell price:	0.030270
+[DEBUG]Buy price:	0.030280 Sell price:	0.030270
+[DEBUG] Raise: 0.009970
+[DEBUG] Tried to buy 0.081 LTC for 0.002434
+[DEBUG]Old buy price: 	0.030270 Old sell price: 	0.030210
+[DEBUG]Last buy price: 	0.030210 Last sell price: 	0.030270
+[DEBUG]Do buy price: 	0.030200 Do sell price:	0.030050
+[DEBUG]Buy price: 	0.030200 Sell price: 	0.030050
+[DEBUG] Fall: 0.010003
+ Profit: -0.003676[DEBUG] Tried to sell 0.090 LTC for 0.002734
+[DEBUG]Old buy price:	0.030200 Old sell price:	0.030050
+[DEBUG]Last buy price:	0.030210 Last sell price:	0.030270
+[DEBUG]Do buy price:	0.030210 Do sell price:	0.030270
+[DEBUG]Buy price:	0.030210 Sell price:	0.030270
+[DEBUG] Raise: 0.010000
+[DEBUG] Tried to buy 0.082 LTC for 0.002450
+[DEBUG]Old buy price: 	0.030250 Old sell price: 	0.030040
+[DEBUG]Last buy price: 	0.030210 Last sell price: 	0.030270
+[DEBUG]Do buy price: 	0.030000 Do sell price:	0.029990
+[DEBUG]Buy price: 	0.030000 Sell price: 	0.029990
+[DEBUG] Fall: 0.010070
+ Profit: -0.003694[DEBUG] Tried to sell 0.091 LTC for 0.002734
+[DEBUG]Old buy price:	0.030250 Old sell price:	0.030000
+[DEBUG]Last buy price:	0.030210 Last sell price:	0.030270
+[DEBUG]Do buy price:	0.030270 Do sell price:	0.030010
+[DEBUG]Buy price:	0.030270 Sell price:	0.030010
+[DEBUG] Raise: 0.010087
+[DEBUG] Tried to buy 0.082 LTC for 0.002450
+[DEBUG]Old buy price: 	0.030210 Old sell price: 	0.030030
+[DEBUG]Last buy price: 	0.030210 Last sell price: 	0.030270
+[DEBUG]Do buy price: 	0.030000 Do sell price:	0.029990
+[DEBUG]Buy price: 	0.030000 Sell price: 	0.029990
+[DEBUG] Fall: 0.010070
+ Profit: -0.003694[DEBUG] Tried to sell 0.091 LTC for 0.002734
+[DEBUG]Old buy price:	0.030160 Old sell price:	0.030000
+[DEBUG]Last buy price:	0.030210 Last sell price:	0.030270
+[DEBUG]Do buy price:	0.030160 Do sell price:	0.030030
+[DEBUG]Buy price:	0.030160 Sell price:	0.030030
+[DEBUG] Raise: 0.010080
+ Profit: -0.003636[DEBUG] Tried to sell 0.091 LTC for 0.002734
+[DEBUG]Old buy price:	0.030180 Old sell price:	0.030160
+[DEBUG]Last buy price:	0.030210 Last sell price:	0.030270
+[DEBUG]Do buy price:	0.030180 Do sell price:	0.030170
+[DEBUG]Buy price:	0.030180 Sell price:	0.030170
+[DEBUG] Raise: 0.010033
+[DEBUG] Tried to buy 0.081 LTC for 0.002437
+[DEBUG]Old buy price: 	0.030170 Old sell price: 	0.030160
+[DEBUG]Last buy price: 	0.030210 Last sell price: 	0.030270
+[DEBUG]Do buy price: 	0.030160 Do sell price:	0.030150
+[DEBUG]Buy price: 	0.030160 Sell price: 	0.030150
+[DEBUG] Fall: 0.010017
+ Profit: -0.003636[DEBUG] Tried to sell 0.091 LTC for 0.002734
+[DEBUG]Old buy price:	0.030170 Old sell price:	0.030160
+[DEBUG]Last buy price:	0.030210 Last sell price:	0.030270
+[DEBUG]Do buy price:	0.030190 Do sell price:	0.030180
+[DEBUG]Buy price:	0.030190 Sell price:	0.030180
+[DEBUG] Raise: 0.010030
+ Profit: -0.003679
+
