@@ -1,0 +1,3 @@
+#get these from your profile page in BTC-e, after pressing 'API keys'
+API_KEY = "API key here"
+API_SECRET = "API secret here"
