@@ -1,8 +1,8 @@
 import urllib2, json, time, thread, btceapi, config, sys
 CUR1name = 'LTC'# name of first currency.
 CUR2name = 'BTC'# "	  second	"
-CUR1amount = 1
-CUR2amount = 0.01
+CUR1amount = 10
+CUR2amount = 0.1
 lowerlimit = 0.1
 scalefactor = 25
 debug = True
