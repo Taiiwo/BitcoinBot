@@ -4,7 +4,7 @@ CUR2name = 'BTC'# "	  second	"
 CUR1amount = 10
 CUR2amount = 0.1
 lowerlimit = 0.1
-scalefactor = 25
+scalefactor = 10
 debug = True
 def getjson():
 	while 1:
