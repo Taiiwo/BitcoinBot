@@ -12,15 +12,9 @@ import hmac
 import time
 
 class api:
-<<<<<<< HEAD
- __api_key = '';
- __api_secret = '';
- __nonce_v = 1;
-=======
  __api_key        = '';
  __api_secret        = '';
  __nonce_v        = 1;
->>>>>>> 1c0c69bd6e8bd5882f829b578ee14a6b342d8be6
  __wait_for_nonce = False
 
  def __init__(self,api_key,api_secret,wait_for_nonce=False):
@@ -79,15 +73,8 @@ class api:
 
  def Trade(self, tpair, ttype, trate, tamount):
   params = {
-<<<<<<< HEAD
-   "pair" : tpair,
-   "type" : ttype,
-   "rate" : trate,
-   "amount" : tamount}
-=======
    "pair"        : tpair,
    "type"        : ttype,
    "rate"        : trate,
    "amount"        : tamount}
->>>>>>> 1c0c69bd6e8bd5882f829b578ee14a6b342d8be6
   return self.__api_call('Trade', params)

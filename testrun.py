@@ -44,25 +44,17 @@ def buyprice():
 	return float(getjson()['ticker']["buy"])
 
 def buy(wallet, amount, bprice):
-	wallets = btceapi.api.Trade(btceapi.api(config.API_KEY,config.API_SECRET), CUR1name.lower() + "_" + CUR2name.lower(), 'buy', bprice, float("%.4f"% amount))
-	if wallets['success'] == 1:
-		wallet[CUR1name] = wallets['return']['funds'][CUR1name.lower()]
-		wallet[CUR2name] = wallets['return']['funds'][CUR2name.lower()]
-	else:
-		print wallets['error']
-	return wallet
-    
+	wallet[CUR1name] += amount
+	wallet[CUR2name] -= amount * bprice
+	return wallet    
 def sell(wallet, amount, sprice):
-	wallets = btceapi.api.Trade(btceapi.api(config.API_KEY,config.API_SECRET), CUR1name.lower() + "_" + CUR2name.lower(), 'sell', sprice, float("%.4f"% amount))
-	if wallets['success'] == 1:
-		wallet[CUR1name] = wallets['return']['funds'][CUR1name.lower()]
-		wallet[CUR2name] = wallets['return']['funds'][CUR2name.lower()]
-	else:
-		print wallets['error']
+	wallet[CUR1name] -= amount
+	wallet[CUR2name] += amount * sprice
 	return wallet
 def getwallet():
-	accountdata = btceapi.api.getInfo(btceapi.api(config.API_KEY, config.API_SECRET))
-	wallet = {CUR1name : accountdata['return']['funds'][CUR1name.lower()], CUR2name : accountdata['return']['funds'][CUR2name.lower()]};
+	wallet = {}
+	wallet[CUR1name] = CUR1amount
+	wallet[CUR2name] = CUR2amount
 	return wallet
     
 def textbetween(str1,str2,text):# returns the text between str1 and str2 in text. This is usefull for parsing data.
