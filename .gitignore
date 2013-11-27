@@ -1,2 +1,3 @@
 moneylog.csv
 config.py
+*.pyc
