@@ -1,4 +1,4 @@
-import urllib2, json, time, thread, btceapi, config, sys
+import urllib2, json, time, thread, sys
 CUR1name = 'LTC'# name of first currency.
 CUR2name = 'BTC'# "	  second	"
 CUR1amount = 10
