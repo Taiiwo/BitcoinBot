@@ -3,8 +3,8 @@ CUR1name = 'LTC'# name of first currency.
 CUR2name = 'BTC'# "	  second	"
 CUR1amount = 10
 CUR2amount = 0.1
-lowerlimit = 0.1
-scalefactor = 10
+lowerlimit = 0
+scalefactor = 25
 debug = True
 def getjson():
 	while 1:
@@ -161,7 +161,8 @@ while 1:
 	else:
 		f.write("%s, %s, %s, %s, %s, %s\n"% (sprice, bprice, wallet[CUR1name], wallet[CUR2name], '0', '0'))
 	totald = wallet[CUR2name] + (wallet[CUR1name] * sprice)# update totald
-	updatetext = " Profit: %.6f"% (totald - fetotal)
+	nowTotal = CUR2amount + (CUR1amount * sprice)
+	updatetext = " Profit: %.6f"% (totald - nowTotal)
 	time.sleep(10)
 
 
